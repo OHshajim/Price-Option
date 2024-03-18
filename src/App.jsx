@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <Navbar></Navbar>
+      <Navbar></Navbar>
       {/* <DaisyNav></DaisyNav> */}
       <PriceOptions></PriceOptions>
     </>

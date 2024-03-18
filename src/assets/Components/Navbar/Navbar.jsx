@@ -22,7 +22,7 @@ const Navbar = () => {
                 }
             </div>
 
-            <ul className={`lg:flex gap-10 absolute md:static duration-1000 bg-cyan-900 px-6 rounded-xl py-2 shadow-xl
+            <ul className={`md:flex gap-10 absolute md:static duration-1000 bg-cyan-900 px-6 rounded-xl py-2 shadow-xl
             ${isOpen?'top-11':'-top-60'}
             `}>
                 {
