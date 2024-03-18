@@ -13,16 +13,18 @@ const Navbar = () => {
         { id: 5, name: 'Products', path: '/products' }
     ];
     return (
-        <nav>
-            <div className="md:hidden text-3xl" onClick={() => setMenu(!isOpen)}>
+        <nav className="text-white bg-cyan-700 p-2">
+            <div className="md:hidden text-3xl px-2" onClick={() => setMenu(!isOpen)}>
                 {
                     isOpen === true ?
-                        <CiMenuKebab /> :
-                        <IoMdCloseCircleOutline />
+                    <IoMdCloseCircleOutline /> :
+                        <CiMenuKebab /> 
                 }
             </div>
 
-            <ul className="lg:flex gap-10">
+            <ul className={`lg:flex gap-10 absolute md:static duration-1000 bg-cyan-900 px-6 rounded-xl py-2 shadow-xl
+            ${isOpen?'top-11':'-top-60'}
+            `}>
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
