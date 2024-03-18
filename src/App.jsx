@@ -10,8 +10,6 @@ function App() {
     <>
     <Navbar></Navbar>
       {/* <DaisyNav></DaisyNav> */}
-      <h1 className="text-5xl bg-rose-500 p-3 text-white">Vite + React</h1>
-
       <PriceOptions></PriceOptions>
     </>
   )
