@@ -3,7 +3,7 @@ import Feature from '../Feature/Feature';
 
 const PriceOption = ({ option }) => {
     const { type, price, features } = option
-    console.log(features);
+    // console.log(features);
     return (
         <div className='bg-[#5d8499] text-black font-semibold m-3 text-center p-5 rounded-xl flex flex-col'>
             <h2>

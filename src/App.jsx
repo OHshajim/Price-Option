@@ -2,6 +2,7 @@
 
 import LineChart from "./assets/Components/LineChart/LineChart"
 import Navbar from "./assets/Components/Navbar/Navbar"
+import Phones from "./assets/Components/Phones/Phones"
 import PriceOptions from "./assets/Components/PriceOptions/PriceOptions"
 
 
@@ -13,6 +14,7 @@ function App() {
       {/* <DaisyNav></DaisyNav> */}
       <PriceOptions></PriceOptions>
       <LineChart></LineChart>
+      <Phones></Phones>
     </>
   )
 }
