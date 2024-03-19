@@ -1,9 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { Bars } from 'react-loader-spinner'
 
 const Phones = () => {
     const [phones, setPhone] = useState([])
+    const [isLoad, setLoad] = useState(true)
     useEffect(() => {
         //     fetch('https://openapi.programming-hero.com/api/phones?search=iphone')
         //     .then(res=>res.json())
@@ -20,12 +22,26 @@ const Phones = () => {
                     return obj;
                 })
                 setPhone(fakeData)
+                setLoad(false)
             })
     }
         , [])
     return (
-        <div>
+        <div className='flex flex-col justify-center items-center'>
             <h1 className='text-5xl text-center mt-10 mb-3'>Phones :{phones.length} </h1>
+            {isLoad && <div>
+                <Bars
+                    height="80"
+                    width="80"
+                    color="#4fa94d"
+                    ariaLabel="bars-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                />
+            </div>
+
+            }
             {
                 <BarChart width={1200} height={450} data={phones}>
                     <Bar dataKey="price" fill="#8884d8" />
